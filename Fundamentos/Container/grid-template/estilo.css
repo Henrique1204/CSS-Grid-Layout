@@ -1,0 +1,54 @@
+body {
+	padding-bottom: 60px;
+	margin: 0px;
+	font-family: monospace;
+	color: #333;
+}
+
+.grid {
+    max-width: 400px;
+	border: 1px solid #ccc;
+    margin: 100px auto 0;
+    /* Transforma em grid container */
+    display: grid;
+}
+
+.item {
+    margin: 5px;
+    font-size: 1.5em;
+    text-align: center;
+    background-color: tomato;
+}
+
+
+.gt-1 {
+    grid-template: 50px 100px 50px 150px / 200px 200px; /* Primeira parte é linha a segunda é coluna, é preciso usar a barra pra separar*/
+}
+
+.logo {
+    grid-area: logo;
+}
+
+.nav {
+    grid-area: nav;
+}
+
+.side-nav {
+    grid-area: side-nav;
+}
+
+.content {
+    grid-area: content;
+}
+
+.advert {
+    grid-area: advert;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.gt-2 {
+    grid-template: "logo nav nav" 50px "side-nav content advert" 150px "side-nav footer footer" 100px / 100px auto 100px;
+}

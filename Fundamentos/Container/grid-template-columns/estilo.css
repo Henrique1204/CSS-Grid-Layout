@@ -1,0 +1,51 @@
+/*
+    Define as colunas.
+    O numero de valores que você passar define o numero de colunas.
+    O valor define o tamanho da coluna.
+    Suporta valores com sufixo fr.
+    fr é um valor de medida frazionaria que define o tamnho apartir de proporção.
+    fr respeita o conteúdo do elemento.
+*/
+
+body {
+	padding-bottom: 60px;
+	margin: 0px;
+	font-family: monospace;
+	color: #333;
+}
+
+.grid {
+    max-width: 400px;
+	border: 1px solid #ccc;
+    margin: 100px auto 0;
+    /* Transforma em grid container */
+    display: grid;
+}
+
+.item {
+    margin: 5px;
+    font-size: 1.5em;
+    text-align: center;
+    background-color: tomato;
+}
+
+
+.gtc-1 {
+    grid-template-columns: 200px 200px; /* Cria duas colunas com 200px de largura */
+}
+
+.gtc-2 {
+    grid-template-columns: 3fr 1fr 1fr 1fr; /* Cria 4 colunas, a primeira com 3 vezes o tamanho das outras 3  */
+}
+
+.gtc-3 {
+    grid-template-columns: minmax(200px, 1fr) 1fr 1fr; /* Minmax define o valor minímo e o valor máximo (m, M) */
+}
+
+.gtc-4 {
+    grid-template-columns: repeat(3, 1fr); /* Recebe um numero de repetições e uma medida, repete a medida de acordo com o numero de repetições */
+}
+
+.gtc-5 {
+    grid-template-columns: repeat(auto-fit, minmax(100px, auto)); /* Cria automaticamente um total de colunas que acomode itens com no mínimo 100px de largura. */
+}

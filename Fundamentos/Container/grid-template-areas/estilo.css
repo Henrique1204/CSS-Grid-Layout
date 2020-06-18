@@ -1,0 +1,68 @@
+body {
+	padding-bottom: 60px;
+	margin: 0px;
+	font-family: monospace;
+	color: #333;
+}
+
+.grid {
+    max-width: 400px;
+	border: 1px solid #ccc;
+    margin: 100px auto 0;
+    /* Transforma em grid container */
+    display: grid;
+}
+
+.item {
+    margin: 5px;
+    font-size: 1.5em;
+    text-align: center;
+    background-color: tomato;
+}
+
+.logo {
+    grid-area: logo;
+}
+
+.nav {
+    grid-area: nav;
+}
+
+.side-nav {
+    grid-area: side-nav;
+}
+
+.content {
+    grid-area: content;
+}
+
+.advert {
+    grid-area: advert;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.gta-1 {
+    grid-template-areas: "logo nav nav" "side-nav content advert" "side-nav footer footer";
+}
+
+.gta-2 {
+    grid-template-areas: "side-nav logo nav" "side-nav content advert" "side-nav content footer";
+}
+
+.gta-3 {
+    grid-template-areas: "logo logo" "nav nav" "content content" "side-nav advert" "footer footer";
+}
+
+.gta-4 {
+    grid-template-columns: 30% 60% 10%;
+    grid-template-rows: 50px 150px 50px;
+    grid-template-areas: "logo nav nav" "side-nav content advert" "side-nav footer footer";
+}
+
+.gta-5 {
+    /* O ponto define um espaço em branco */
+    grid-template-areas: "logo content nav" ". content advert" "side-nav footer .";
+}

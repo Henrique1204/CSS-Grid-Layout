@@ -1,0 +1,28 @@
+/*
+    display: grid; -- Torna o elemento um grid container.
+    display: inline-grid; -- Torna o elemento um grid container porém com comportamento inline.
+    display: subgrid; -- Para grids dentro de grids (ainda não é suportado, porém você pode normalmente colocar display: grid; no grid dentro do grid que funciona).
+*/
+
+body {
+	padding-bottom: 60px;
+	margin: 0px;
+	font-family: monospace;
+	color: #333;
+}
+
+.grid {
+    max-width: 400px;
+	border: 1px solid #ccc;
+    margin: 200px auto;
+    /* Transforma em grid container */
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+}
+
+.item {
+    margin: 5px;
+    font-size: 1.5em;
+    text-align: center;
+    background-color: tomato;
+}

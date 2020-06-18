@@ -1,0 +1,5 @@
+/*
+    grid-auto-flow: row; -- Automaticamente gera novas linhas.
+    grid-auto-flow: column; -- Automaticamente gera novas colunas.
+    grid-auto-flow: dense; -- Tenta posicionar o máximo dos elementos que existirem nas primeiras partes do grid (pode desorganizar o conteúdo).
+*/

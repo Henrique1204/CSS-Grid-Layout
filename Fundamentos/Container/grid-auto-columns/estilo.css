@@ -1,0 +1,47 @@
+body {
+	padding-bottom: 60px;
+	margin: 0px;
+	font-family: monospace;
+	color: #333;
+}
+
+.grid {
+    max-width: 400px;
+	border: 1px solid #ccc;
+    margin: 100px auto 0;
+    /* Transforma em grid container */
+    display: grid;
+}
+
+.item {
+    margin: 5px;
+    font-size: 1.5em;
+    text-align: center;
+    background-color: tomato;
+}
+
+.gac-1 {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 100px; /* Caso tenha necessidade ele cria uma nova coluna e essa coluna vai ter 100px */
+}
+
+.gac-1 > .i6 {
+    grid-column: 5; /* Coloca o item na coluna 5 */
+}
+
+.gac-2 {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 50px 100px; /* Caso tenha necessidade ele cria colunas alternando entre 50px e 100px respectivamente */
+}
+
+.gac-2 > .i6 {
+    grid-column: 6; /* Coloca o item na coluna 5 */
+}
+
+.gac-3 {
+    grid-template-columns: 1fr 1fr; /* Sem o auto-columns ele cria colunas seguindo o tamanho do conteúdo */
+}
+
+.gac-3 > .i6 {
+    grid-column: 6;
+}

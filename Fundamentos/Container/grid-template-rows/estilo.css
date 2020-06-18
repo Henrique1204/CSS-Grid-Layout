@@ -1,0 +1,48 @@
+/*
+    Define as linhas.
+    O numero de valores que você passar define o numero de alinha.
+    O valor define o tamanho da linha.
+    Suporta valores com sufixo fr.
+    fr é um valor de medida frazionaria que define o tamnho apartir de proporção.
+    fr respeita o conteúdo do elemento.
+    Caso tenha mais linhas do que o especificado, as linhas que sobrarem irão ocupar o espaço do conteudo
+    Repeat, minmax e auto fix tbm funciona.
+*/
+
+body {
+	padding-bottom: 60px;
+	margin: 0px;
+	font-family: monospace;
+	color: #333;
+}
+
+.grid {
+    max-width: 400px;
+	border: 1px solid #ccc;
+    margin: 100px auto 0;
+    /* Transforma em grid container */
+    display: grid;
+}
+
+.item {
+    margin: 5px;
+    font-size: 1.5em;
+    text-align: center;
+    background-color: tomato;
+}
+
+
+.gtr-1 {
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 50px 100px 50px 150px; /* Cria 4 linhas com as alturas respectivas aos valores*/
+}
+
+.gtr-2 {
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 2fr 1fr; /* Cria 2 linhas, a primeira com 2 vezes o tamanho da segunda  */
+}
+
+.gtr-3 {
+    grid-template-columns: 100px 50px 250px;
+    grid-template-rows: 100px 50px 250px;
+}
