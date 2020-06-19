@@ -30,22 +30,61 @@ img {
     grid-template-areas: "header header header" "side-nav conteudo anuncios" "footer footer footer";
 }
 
+/* Header */
 .header {
+    padding: 30px;
+    color: #FFF;
+    background: linear-gradient(135deg, #84E, #B7F);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
     grid-area: header;
 }
 
+.header .logo {
+    /* O grid funciona independente do conteúdo, ou seja, mesmo o conteúdo tendo 200px, a coluna continuará pegando 1fr */
+    max-width: 200px;
+}
+
+.header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*li + li -- Significa que só vai aplicar o estilo para os li que vem depois de outro li*/
+.header nav li + li {
+    margin-left: 30px;
+}
+
+.header nav a {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.125em;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: block;
+    transition: 0.1s;
+}
+
+.header nav a:hover, .header nav a:focus {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Navegação Lateral */
 .side-nav {
     grid-area: side-nav;
 }
 
+/* Conteúdo Principal */
 .conteudo {
     grid-area: conteudo;
 }
 
+/* Anúncios */
 .anuncios {
     grid-area: anuncios;
 }
 
+/* Footer */
 .footer {
     grid-area: footer;
 }
