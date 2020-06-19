@@ -34,7 +34,7 @@ img {
 .header {
     padding: 30px;
     color: #FFF;
-    background: linear-gradient(135deg, #84E, #B7F);
+    background: linear-gradient(135deg, #84E, #B07DFB);
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
@@ -89,7 +89,7 @@ img {
 }
 
 .side-nav a:hover, .side-nav a:focus {
-    background-color: #B7F;
+    background-color: #B07DFB;
 }
 
 /* Conteúdo Principal */
@@ -97,6 +97,10 @@ img {
     max-width: 900px;
     padding: 30px;
     margin: 0 auto;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.2em;
+    line-height: 1.6;
+    letter-spacing: -0.005em;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
@@ -104,12 +108,100 @@ img {
 }
 
 .col-span {
+    width: 100%;
     grid-column: 1 / -1;
+}
+
+.titulo {
+    color: #B07DFB;
+}
+
+.titulo h1 {
+    font-size: 3.75em;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.titulo span {
+    font-size: 0.875em;
+    font-style: italic;
+}
+
+.caracteristicas {
+    display: flex;
+    align-items: flex-start;
+}
+
+.caracteristicas > div {
+    width: 80px;
+    border-radius: 5px;
+    text-align: center;
+    color: #B07DFB;
+    background: linear-gradient(135deg, #84E, #B07DFB);
+    box-shadow: 5px 5px 15px 0 rgba(44, 44, 44, 0.1);
+    position: relative;
+}
+
+.caracteristicas > div + div {
+    margin-left: 30px;
+}
+
+.caracteristicas .numero {
+    margin: 10px auto;
+    font-size: 3em;
+    line-height: 1;
+}
+
+.caracteristicas .rotulo {
+    padding: 5px 0;
+    border-radius: 0 0 5px 5px;
+    background-color: #FFF;
+    display: block;
+    position: relative;
+    top: 2px;
 }
 
 .imagem-1 {
     grid-row: span 2;
     align-self: end;
+}
+
+.destaque {
+    max-width: 16em;
+    font-size: 0.875em;
+    color: #B07DFB;
+}
+
+.citacao, .atributos {
+    padding: 30px;
+    border-radius: 5px;
+    color: #FFF;
+    background: linear-gradient(135deg, #84E, #B07DFB);
+    box-shadow: 5px 5px 15px 0 rgba(44, 44, 44, 0.15);
+    align-self: start;
+}
+
+.citacao p{
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 1.5em;
+    font-style: italic;
+    text-align: center;
+}
+
+.atributos li {
+    padding: 15px;
+    font-family: Courier, monospace;
+    font-size: 1.125em;
+    font-weight: 700;
+}
+
+.atributos li + li {
+    border-top: 2px solid #B07DFB;
+}
+
+.informacoes p + p{
+    margin-top: 30px;
 }
 
 /* Anúncios */
@@ -133,6 +225,6 @@ img {
     padding: 30px;
     text-align: center;
     color: #FFF;
-    background: linear-gradient(135deg, #84E, #87F);
+    background: linear-gradient(135deg, #84E, #B07DFB);
     grid-area: footer;
 }
