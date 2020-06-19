@@ -94,7 +94,22 @@ img {
 
 /* Conteúdo Principal */
 .conteudo {
+    max-width: 900px;
+    padding: 30px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
     grid-area: conteudo;
+}
+
+.col-span {
+    grid-column: 1 / -1;
+}
+
+.imagem-1 {
+    grid-row: span 2;
+    align-self: end;
 }
 
 /* Anúncios */
@@ -104,7 +119,7 @@ img {
     display: grid;
     grid-template-columns: 1fr;
     /* align-content mexe com o box do elemento e não com o conteúdo, para conteúdo use o align-items */
-    align-content: flex-start;
+    align-content: start;
     gap: 30px;
     grid-area: anuncios;
 }
