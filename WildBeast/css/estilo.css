@@ -71,7 +71,25 @@ img {
 
 /* Navegação Lateral */
 .side-nav {
+    padding: 30px;
+    background-color: #FAFBFC;
     grid-area: side-nav;
+}
+
+.side-nav a {
+    min-width: 60px;
+    max-width: 100px;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 0 auto 30px;
+    background-color: #FFF;
+    display: block;
+    box-shadow: 5px 5px 15px 0 rgba(44, 44, 44, 0.1);
+    transition: 0.1s ease-out;
+}
+
+.side-nav a:hover, .side-nav a:focus {
+    background-color: #B7F;
 }
 
 /* Conteúdo Principal */
