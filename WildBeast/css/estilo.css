@@ -99,7 +99,18 @@ img {
 
 /* Anúncios */
 .anuncios {
+    padding: 30px;
+    background-color: #FAFBFC;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* align-content mexe com o box do elemento e não com o conteúdo, para conteúdo use o align-items */
+    align-content: flex-start;
+    gap: 30px;
     grid-area: anuncios;
+}
+
+.anuncios img {
+    border-radius: 5px;
 }
 
 /* Footer */
