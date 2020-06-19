@@ -1,0 +1,71 @@
+/*
+    mix-blend-mode: screen; -- Faz a cor do item acima misturar com a cor do item abaixo
+*/
+
+body {
+	padding-bottom: 60px;
+	margin: 0px;
+	font-family: monospace;
+	color: #333;
+}
+
+.grid {
+    max-width: 400px;
+	border: 1px solid #ccc;
+    margin: 100px auto 0;
+    /* Transforma em grid container */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+	grid-auto-rows: 50px;
+}
+
+.item {
+    margin: 5px;
+    font-size: 1.5em;
+    text-align: center;
+    background-color: tomato;
+}
+
+.ga-1 .item-1 {
+    grid-area: 1 / 2 / 4 / 3; 
+    /*
+        Equivalente
+        grid-row-start: 1;
+        grid-column-start: 2;
+        grid-row-end: 4;
+        grid-column-end: 3;
+    */
+}
+
+.ga-1 .item-5 {
+    grid-area: span 2 / 3;
+    /*
+        Equivalente
+        grid-row-start: span 2;
+        grid-column-start: 3;
+    */
+}
+
+.ga-2 {
+    grid-template-areas: "header header header" "side-nav content ads" "side-nav footer footer";
+}
+
+.ga-2 .item-1 {
+    grid-area: header;
+}
+
+.ga-2 .item-2 {
+    grid-area: side-nav;
+}
+
+.ga-2 .item-3 {
+    grid-area: content;
+}
+
+.ga-2 .item-4 {
+    grid-area: ads;
+}
+
+.ga-2 .item-5 {
+    grid-area: footer;
+}

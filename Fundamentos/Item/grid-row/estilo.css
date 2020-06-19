@@ -1,0 +1,87 @@
+body {
+	padding-bottom: 60px;
+	margin: 0px;
+	font-family: monospace;
+	color: #333;
+}
+
+.grid {
+    max-width: 400px;
+	border: 1px solid #ccc;
+    margin: 100px auto 0;
+    /* Transforma em grid container */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+	grid-auto-rows: 50px;
+}
+
+.item {
+    margin: 5px;
+    font-size: 1.5em;
+    text-align: center;
+    background-color: tomato;
+}
+
+.gr-1 .item-1 {
+    grid-row: 3; /* O item fica na linha 3 */
+}
+
+.gr-1 .item-3 {
+    grid-row: 1; /* O item fica na linha 1 */
+}
+
+.gr-2 .item-1 {
+    grid-row: 1 / 4; /* O item começa em 1 e vai até 4 */
+}
+
+.gr-2 .item-5 {
+    grid-row: span 3;
+}
+
+.gr-2 .item-6 {
+    grid-row: span 2;
+}
+
+.gr-3 .item-1 {
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+.gr-3 .item-2 {
+    grid-row: 1 / 3; /* Define de onde até onde o item irá ocupar */
+}
+
+.gr-3 .item-4 {
+    grid-row-start: 1; /* Onde a linha vai começar */
+    grid-row-end: 3; /* Onde a linha vai terminar */
+}
+
+.gr-4 {
+    grid-template-rows: [linha1] 1fr [linha2] 1fr [linha3] 1fr;
+}
+
+.gr-4 .item-2 {
+    grid-row: linha1 / linha3;
+} 
+
+.gr-4 .item-4 {
+    grid-row: linha1 / 4;
+}
+
+.gr-5 {
+    grid-template-areas: "header header header" "side-nav content ads" "side-nav footer footer";
+}
+
+.gr-5 .item-1 {
+    grid-column: header / header;
+    grid-row: header / header;
+}
+
+.gr-5 .item-2 {
+    grid-column: side-nav / side-nav;
+    grid-row: side-nav / side-nav;
+}
+
+.gr-5 .item-5 {
+    grid-column: footer / footer;
+}
