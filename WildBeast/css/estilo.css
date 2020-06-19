@@ -115,5 +115,9 @@ img {
 
 /* Footer */
 .footer {
+    padding: 30px;
+    text-align: center;
+    color: #FFF;
+    background: linear-gradient(135deg, #84E, #87F);
     grid-area: footer;
 }
